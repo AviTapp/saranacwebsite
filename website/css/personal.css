@@ -4,30 +4,16 @@ body {
 }
 a:link,
 a:visited,
-a:hover,
 a:active {
 	text-decoration: none;
 	color: black;
 }
-.address,
-.phone {
-	min-height: 20px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	margin: 75px 50px 0px;
-	text-align: center;
-	vertical-align: middle;
-}
-.address {
-	background-color: #227a8f;
-}
 .banner {
-	height: 75px;
-	margin: 20px 0px 0px 0px;
-}
-.phone {
-	background-color: #766d07;
+	background-color: white;
+	padding: 20px 0px;
+	-webkit-border-radius: 0px 0px 125px 125px;
+	-moz-border-radius: 0px 0px 125px 125px;
+	border-radius: 0px 0px 125px 125px;
 }
 .menu>li {
 	margin: 0px;
@@ -37,7 +23,12 @@ a:active {
 	font-size: 15px;
 	background-color: inherit;
 	color: black;
-	margin-left: 15px;
+	padding-left: 15px;
+	margin-left: 0px;
+}
+.submenu:hover {
+	text-decoration: none;
+	background-color: white;
 }
 .topNavBar {
 	float: left;
@@ -75,4 +66,27 @@ a:active {
 .logoAT {
 	width: 60px;
 	height: 60px;
+}
+/*===============================================*/
+.eventBox,
+.dayOfWeek {
+	min-height: 50px;
+	width: 132px;
+	float: left;
+	margin: 1px -1px 0px;
+	background-color: white;
+	z-index: -1;
+	position: relative;
+	text-align: left;
+	border-left: solid 4px crimson;
+	font-family: serif;
+}
+.dayOfWeek {
+	min-height: 25px;
+	margin: 5px -1px;
+	-webkit-border-radius: 50px 0px;
+	-moz-border-radius: 50px 0px;
+	border-radius: 50px 0px;
+	font-size: x-large;
+	text-align: center;
 }
