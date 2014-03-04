@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Peralta|Elsie);
-body {
-	background-color: #333300;
+html {
+	background: url(../img/brown.png) no-repeat center center fixed;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
 }
 a:link,
 a:visited,
@@ -8,12 +12,28 @@ a:active {
 	text-decoration: none;
 	color: black;
 }
-.banner {
-	background-color: white;
-	padding: 20px 0px;
-	-webkit-border-radius: 0px 0px 125px 125px;
-	-moz-border-radius: 0px 0px 125px 125px;
-	border-radius: 0px 0px 125px 125px;
+.logo {
+	position: absolute;
+	top: 0px;
+	left: 25px;
+	width: 40%;
+}
+.building {
+	width: 100%;
+	height: 100%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-o-border-radius: 30px;
+	border-radius: 30px;
+	box-shadow: -10px 10px 5px #0F2F0A;
+}
+.logoAT {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 999;
 }
 .menu>li {
 	margin: 0px;
@@ -29,43 +49,94 @@ a:active {
 .submenu:hover {
 	text-decoration: none;
 	background-color: white;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-o-border-radius: 15px 15px 15px 15px;
+	border-radius: 15px 15px 15px 15px;
 }
 .topNavBar {
-	float: left;
+	position: absolute;
+	z-index: 999;
 	height: 76px;
 }
-.topNavItem,
-.bottomNavItem {
-	margin-top: 30px;
-	min-height: 30px;
+.topNavItem {
 	text-align: center;
 	font-size: 24px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
 	border-radius: 15px;
-	vertical-align: bottom;
-}
-.topNavItem {
 	font-family: 'Elsie', cursive;
-	background-color: #cccc66;
-	margin: 20px 10px;
+	background-color: #596D92;
+	margin: 20px 17px;
+	width: 205px;
+	float: left;
 }
 .mainContent {
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
 	border-radius: 15px;
 	height: 450px;
-	box-shadow: 10px 10px 5px #666633;
 	position: relative;
 	z-index: -1;
 }
-.bottomNavItem {
-	font-family: 'Peralta', cursive;
-	background-color: #3f022f;
+.ribbon-wrapper-blue {
+	width: 213px;
+	height: 215px;
+	overflow: hidden;
+	position: absolute;
+	top: -6px;
+	right: -5px;
 }
-.logoAT {
-	width: 60px;
-	height: 60px;
+.ribbon-blue {
+	font: bold 18px Sans-Serif;
+	color: #333;
+	text-align: center;
+	/*text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform:    rotate(45deg);
+	-ms-transform:     rotate(45deg);
+	-o-transform:      rotate(45deg);
+	position: relative;
+	padding: 7px 0;
+	left: -24px;
+	top: 60px;
+	width: 300px;
+	font-family: 'Elsie', cursive;
+	background-color: #596D92;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#9DADC9), to(#1D345F)); 
+	background-image: -webkit-linear-gradient(top, #9DADC9, #1D345F); 
+	background-image:    -moz-linear-gradient(top, #9DADC9, #1D345F); 
+	background-image:     -ms-linear-gradient(top, #9DADC9, #1D345F); 
+	background-image:      -o-linear-gradient(top, #9DADC9, #1D345F); 
+	/*color: #6a6340;*/
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+}
+.ribbon-blue:before, .ribbon-blue:after {
+	content: "";
+	border-top:   4px solid #9DADC9;   
+	border-left:  3px solid transparent;
+	border-right: 3px solid transparent;
+	position:absolute;
+	bottom: -3px;
+}
+.ribbon-blue:before {
+	left: 0;
+}
+.ribbon-blue:after {
+	right: 0;
+}
+.mission {
+	font-family: 'Peralta', cursive;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 50px;
+	margin-left: 15px;
+	width: 400px;
 }
 /*===============================================*/
 .eventBox,
@@ -78,7 +149,7 @@ a:active {
 	z-index: -1;
 	position: relative;
 	text-align: left;
-	border-left: solid 4px crimson;
+	border-left: solid 4px #0F2F0A;
 	font-family: serif;
 	padding: 5px;
 }
@@ -108,3 +179,95 @@ a:active {
 	border-radius: 15px;
 	background-color: #ccffcc;
 }
+/*========== Calendar.css ==========*/
+#calendar {
+	margin-top: 15px;
+	padding: 0;
+	width: 700px;
+	border: 2px solid #333;
+	background-color: #9DADC9; }
+#calendar li {
+	list-style-position: inside;
+	font-weight: bold;
+	width: 88px;
+	height: 88px;
+	border: 1px solid #999;
+	float: left; 
+	background-color: #fff; 
+	padding: 5px;
+	overflow: hidden; }
+#calendar li:hover {overflow: visible; }
+#calendar li ul {
+	margin: 0;
+	padding: 0;
+	clear: both; }
+#calendar li ul li {
+	list-style: none;
+	font-weight: normal;
+	float: none;
+	border: none;
+	padding: 5px 0;
+	margin: 0; }
+#calendar li:hover ul li, #calendar li.hover ul li {
+	position: absolute;
+	width: 150px;
+	margin-left: -38px;
+	height: auto;
+	background-color: #8cf; 
+	border: 1px solid #069;
+	padding: 10px;
+	z-index: 10; } 
+#calendar li.sunday {margin-left: 0; }
+#calendar li.monday {margin-left: 100px; }
+#calendar li.tuesday {margin-left: 200px; }
+#calendar li.wednesday {margin-left: 300px; }
+#calendar li.thursday {margin-left: 400px; }
+#calendar li.friday {margin-left: 500px; }
+#calendar li.saturday {margin-left: 600px; }
+.clear {clear: both; }
+.calendar-container {
+	margin-top: 50px;
+	position: absolute;
+}
+.calendar {
+	width: 100%;
+}
+.calendar > h1 {
+	margin-left: 30px;
+}
+.seder {
+	padding: 0;
+	
+	background-color: #9DADC9;
+}
+.seder > h1 {
+	text-align: center;
+}
+/*========== Table ==========*/
+.tftable {
+	float: right;
+	margin-top: 66px;
+	margin-right: -10px;
+	font-size:12px;
+	color:#333333;
+	max-width:245px;
+	border: 2px solid #0F2F0A;
+	border-collapse: collapse;}
+.tftable th {
+	font-size:12px;
+	background-color:#acc8cc;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #729ea5;
+	text-align:left;}
+.tftable tr {background-color:#d4e3e5;}
+.tftable td {
+	font-size:12px;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #729ea5;}
+.tftable tr:hover {background-color:#ffffff;}
+.tftable tr th:nth-child(1),
+.tftable tr:nth-child(1) {background-color: transparent;}
